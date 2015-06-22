@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Fuellog\Events;
 
 abstract class Event
 {

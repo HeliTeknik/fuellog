@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Fuellog\Http\Controllers\Auth;
 
-use App\User;
+use Fuellog\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Fuellog\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
