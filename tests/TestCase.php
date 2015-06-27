@@ -20,6 +20,23 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
+        $this->setupDatabase();
+
         return $app;
+    }
+
+    /**
+     * Create SQLite Database and Migrate everything
+     * @return void
+     */
+    public function setupDatabase()
+    {
+        if (!File::exists( storage_path('database.sqlite') )) {
+
+            File::put( storage_path('database.sqlite'), '');
+
+        }
+
+        Artisan::call('migrate:refresh');
     }
 }

@@ -12,5 +12,30 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+
+    mix.sass('main.scss');
+
+    mix.browserify('app.js');
+
+    mix.phpUnit();
+
+});
+
+
+
+/**
+ * Normal Gulp Tasks
+ */
+
+var gulp = require('gulp');
+var cssScss = require('gulp-css-scss');
+
+
+/**
+ * Morph BASSCSS source files into SASS
+ */
+gulp.task('css-scss', function() {
+  return gulp.src('./node_modules/basscss/src/basscss.css')
+    .pipe(cssScss())
+    .pipe(gulp.dest('./resources/assets/css'));
 });

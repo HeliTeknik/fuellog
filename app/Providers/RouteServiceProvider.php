@@ -4,6 +4,7 @@ namespace Fuellog\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Fuellog\Vehicle;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,13 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+
+        $router->bind('vehicles', function($value)
+        {
+            return Vehicle::whereId($value)->allowed()->firstOrFail();
+        });
+
+        $router->model('logs', 'Fuellog\Log');
     }
 
     /**

@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
+
+Route::get('home', function(){
+
+    return redirect('/');
+
 });
 
 // Authentication routes...
@@ -23,3 +27,10 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::resource('vehicles', 'VehicleController');
+    Route::resource('vehicles.logs', 'LogController');
+
+});
