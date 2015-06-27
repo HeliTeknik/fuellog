@@ -9,6 +9,9 @@
         <title>@yield('title', 'Fuellog')</title>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="author" href="humans.txt">
+
+        <link rel="apple-touch-icon" href="/images/icon.256.png">
+
     </head>
     <body>
 
