@@ -2,7 +2,7 @@
  * Require modules through Browserify
  */
 var Vue = require('vue');
-
+var Dropdown = require('./basscss/dropdown');
 
 /**
  * This Code should move to it's one file
