@@ -11,8 +11,7 @@
     {!! Form::label('driven_units', 'Driven KM') !!}
     {!! Form::text('driven_units', null, [
         'class' => 'block full-width mb1 field-light',
-        'v-model' => 'log.driven_units',
-        'pattern' => '[0-9]*'
+        'v-model' => 'log.driven_units'
     ]) !!}
 
 
@@ -20,23 +19,20 @@
     {!! Form::text('fueled_units', null, [
         'class' => 'block full-width mb1 field-light',
         'v-model' => 'log.fueled_units',
-        'v-on' => 'blur: calcTotal()',
-        'pattern' => '[0-9]*'
+        'v-on' => 'blur: calcTotal()'
     ]) !!}
 
     {!! Form::label('cost_per_unit', 'Cost per Unit') !!}
     {!! Form::text('cost_per_unit', null, [
         'class' => 'block full-width mb1 field-light',
         'v-model' => 'log.cost_per_unit',
-        'v-on' => 'blur: calcTotal()',
-        'pattern' => '[0-9]*'
+        'v-on' => 'blur: calcTotal()'
     ]) !!}
 
     {!! Form::label('cost_total', 'Total Cost (We calculate this for you)') !!}
     {!! Form::text('cost_total', null, [
         'class' => 'block full-width mb1 field-light',
-        'v-model' => 'log.cost_total',
-        'pattern' => '[0-9]*'
+        'v-model' => 'log.cost_total'
     ]) !!}
 
     {!! Form::hidden('longitude', null, ['v-model' => 'log.longitude']) !!}
