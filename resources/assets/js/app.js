@@ -39,7 +39,7 @@ var vm = new Vue({
          */
         calcTotal: function() {
 
-            calc = this.log.fueled_units * this.log.cost_per_unit;
+            var calc = this.log.fueled_units * this.log.cost_per_unit;
 
             this.log.cost_total = Math.round(calc * 100) / 100;
 

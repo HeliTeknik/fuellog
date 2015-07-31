@@ -9,6 +9,6 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-css-scss": "0.0.2",
-    "laravel-elixir": "^2.0.0"
+    "laravel-elixir": "^3.0.0"
   }
 }

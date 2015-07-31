@@ -1,5 +1,7 @@
 ## Fuellog (alpha) - keep track of your fuel expenses
 
+[![Build Status](https://travis-ci.org/stefanzweifel/fuellog.svg?branch=master)](https://travis-ci.org/stefanzweifel/fuellog)
+
 > A simple app to keep track of your fuel expenses. (Early early alpha. A lot will change in the future)
 
 ### Planned features

@@ -7,7 +7,7 @@
 
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Noto+Sans:400,700' rel='stylesheet' type='text/css'>
         <title>@yield('title', 'Fuellog')</title>
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="author" href="humans.txt">
 
         <link rel="apple-touch-icon" href="/images/icon.256.png">
@@ -31,6 +31,6 @@
             @include('_layouts._footer')
         </div>
 
-        <script src="/js/bundle.js"></script>
+        <script src="/js/app.js"></script>
     </body>
 </html>
