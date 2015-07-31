@@ -31,6 +31,10 @@
             @include('_layouts._footer')
         </div>
 
+        <script src="http://maps.google.com/maps/api/js"></script>
+
         <script src="/js/app.js"></script>
+
+        @yield('scripts')
     </body>
 </html>

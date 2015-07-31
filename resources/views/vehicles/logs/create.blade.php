@@ -11,3 +11,11 @@
     {!! Form::close() !!}
 
 @stop
+
+@section('scripts')
+
+    <script>
+        Fuellog.logForm();
+    </script>
+
+@stop

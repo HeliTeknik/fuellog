@@ -11,7 +11,6 @@
 
     <hr>
 
-
     <ul>
         <li>Fueled: {{ $log->fueled_units }}</li>
         <li>Cost per Unit: {{ $log->cost_per_unit }}</li>
@@ -20,12 +19,29 @@
         <li><b>Average Usage:</b> {{ $log->average_usage }}</li>
     </ul>
 
-    {{-- TODO
+    @if ($log->hasCoordinates())
 
-        - Display log information
-        - If geolocation is available, show a map with a pin
-        - Make it prettier
+        <div id="map" class="log-map"></div>
 
-     --}}
+    @else
+
+        <div class="bg-gray p4 center">
+            <span class="white">No coordinates available</span>
+        </div>
+
+    @endif
+
+@stop
+
+
+@section('scripts')
+
+    @if ($log->hasCoordinates())
+
+        <script>
+            Fuellog.drawLogMap({{ $log->latitude}}, {{ $log->longitude }}, '#map');
+        </script>
+
+    @endif
 
 @stop

@@ -23,3 +23,7 @@
 @if (Session::has('success'))
     @include('_partials.messages._success', ['message' => session('message')])
 @endif
+
+<noscript>
+    @include('_partials.messages._danger', ['message' => "Fuellog doesn't work correctly while Javascript is disabled. Please activate Javascript."])
+</noscript>

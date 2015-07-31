@@ -73,4 +73,17 @@ class Log extends Model
         $this->attributes['latitude'] = \Crypt::encrypt($value);
     }
 
+
+    /**
+     * Determine if Log has valid coordinates
+     * @return boolean
+     */
+    public function hasCoordinates()
+    {
+        if ($this->latitude != 0 && $this->longitude != 0) {
+            return true;
+        }
+
+        return false;
+    }
 }

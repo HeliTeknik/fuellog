@@ -4,6 +4,7 @@
     "basscss": "^6.1.6",
     "basscss-responsive-white-space": "0.0.1",
     "basscss-sass": "^1.0.2",
+    "gmaps": "^0.4.18",
     "vue": "^0.12.4"
   },
   "devDependencies": {

@@ -26,7 +26,7 @@
                     <span class="md-hide">Menu &#9662;</span>
                     <span class="md-show">More &#9662;</span>
                 </a>
-                <div data-details class="absolute right-0 xs-left-0 sm-col-6 md-col-4 lg-col-3 nowrap white bg-primary rounded-bottom">
+                <div data-details class="absolute right-0 xs-left-0 sm-col-6 md-col-4 lg-col-3 nowrap white bg-primary rounded-bottom" style="display: none;">
                     <ul class="h5 list-reset mb0">
 
                         <li class="md-hide">
